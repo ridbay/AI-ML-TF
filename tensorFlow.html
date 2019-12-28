@@ -10,6 +10,13 @@
 </head>
 <body>
     <h1>Welcome to MobileNet</h1>
-    <img crossOrigin src="https://i.imgur.com/e5KD2lt.jpg" alt="" srcset="">
+    <img id="img" crossOrigin src="https://i.imgur.com/e5KD2lt.jpg" alt="" srcset="">
+    <h2 id="message">This is ML</h2>
+    <script>
+        let img = document.getElementById("img")
+        mobilenet.load().then(net=> {
+            console.log("Model is loaded to memory")
+        })
+    </script>
 </body>
 </html>
