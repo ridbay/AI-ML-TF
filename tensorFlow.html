@@ -16,7 +16,12 @@
         
         mobilenet.load().then(net=> {
             const theImage = document.getElementById("img")
-            
+            net.classify(theImage).then(result => {
+                document.getElementById("message").innerText = `
+                Detected: ${result[0].className}
+                Probability: ${result[0].probability}
+                `
+            })
         })
     </script>
 </body>
